@@ -1,0 +1,12 @@
+header {
+    &.banner {
+        & .wrap {
+            @include make-container();
+            
+            @extend .d-flex;
+            @extend .justify-content-between;
+
+            width: 1400px;
+        }
+    }
+}

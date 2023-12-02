@@ -1,4 +1,6 @@
 import domReady from '@roots/sage/client/dom-ready';
+// Import Bootstrap
+import 'bootstrap';
 
 /**
  * Application entrypoint

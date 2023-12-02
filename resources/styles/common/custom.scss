@@ -1,0 +1,72 @@
+.test {
+  border: 1px solid red;
+}
+
+// Nav
+header {
+    &.banner {
+        @extend .d-flex;
+        @extend .flex-wrap;
+        @extend .align-items-center;
+        @extend .justify-content-center;
+        @extend .py-3;
+        @extend .mb-4; 
+       
+        & .menu {
+            @include make-col-ready();
+
+            @include media-breakpoint-up(md) {
+                @include make-col(4);
+            }
+
+            @extend .mb-2;
+         //   @extend .justify-content-start;
+            @extend .mb-md-0;
+        }
+
+        & .logo {
+            @include media-breakpoint-down(md) {
+                @include make-col-ready();
+                @include make-col(12);
+            }
+            
+            @extend .d-flex;
+            @extend .align-items-center;
+            @extend .mb-2;
+            @extend .mb-md-0;
+            @extend .justify-content-center;
+         //   @extend .text-decoration-none;
+            @extend .text-center;
+                     
+            & img {
+                @extend .img-fluid;
+               
+                width: 7.5rem;
+            }
+
+        }
+
+        & .menu-right {
+            @include make-col-ready();
+
+            @include media-breakpoint-up(md) {
+                @include make-col(4);
+              
+                text-align: right;
+            }
+
+            @extend .mb-2;            
+            @extend .mb-md-0;
+
+            text-align: center;
+        }
+    }
+}
+
+main {
+    @include make-container();
+    
+    min-height: 90vh;
+    width: 100%;
+    padding-top: 12rem;
+}
